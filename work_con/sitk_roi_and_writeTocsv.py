@@ -85,7 +85,7 @@ def readDate(i, volname, getVolname, Volume2WindowLevel, cen_posX, cen_posY, cen
 #                             print(data)
     df1 = pd.DataFrame(data)
     DF = DF.append(df1,ignore_index = False)
-    DF.to_csv('D:/12_data_roi/11_json.csv')   #  csv  存储路径
+    DF.to_csv('F:/12_data_roi/11_json.csv')   #  csv  存储路径
     print(DF)
 
 def storeImgFile(i, volname, xbegin, xend, ybegin, yend, zbegin, zend):
@@ -94,7 +94,7 @@ def storeImgFile(i, volname, xbegin, xend, ybegin, yend, zbegin, zend):
     print([xbegin,xend,ybegin,yend,zbegin,zend+1])
 
     fol_name = root.split('/')[-1]
-    root1 = "D:/12_data_roi/test/" + root.split('/')[-1] + '/'  # 存储文件夹命名
+    root1 = "F:/12_data_roi/test/" + root.split('/')[-1] + '/'  # 存储文件夹命名
         #  生成文件夹--》ok
     if not os.path.exists(root1):
         os.makedirs(root1)
@@ -104,7 +104,7 @@ def storeImgFile(i, volname, xbegin, xend, ybegin, yend, zbegin, zend):
     print("done!")
 
 if __name__ == '__main__':
-    path = 'D:/12_data_roi/'  #根目录
+    path = 'F:/12_data_roi/'  #根目录
     DF = pd.DataFrame()
     for folder_name in os.listdir(path):
         folder_dir = os.path.join(path,folder_name)
