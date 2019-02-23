@@ -94,7 +94,7 @@ def storeImgFile(i, volname, xbegin, xend, ybegin, yend, zbegin, zend):
     print([xbegin,xend,ybegin,yend,zbegin,zend+1])
 
     fol_name = root.split('/')[-1]
-    root1 = "F:/12_data_roi/test/" + root.split('/')[-1] + '/'  # 存储文件夹命名
+    root1 = 'F:/12_data_roi/test/' + root.split('/')[-1] + '/'  # 存储文件夹命名
         #  生成文件夹--》ok
     if not os.path.exists(root1):
         os.makedirs(root1)
